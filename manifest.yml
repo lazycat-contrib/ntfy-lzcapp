@@ -1,0 +1,29 @@
+lzc-sdk-version: "0.1"
+name: ntfy
+package: cloud.lazycat.app.ntfy
+version: 2.11.0
+description: 一个简单的基于 HTTP 的发布\订阅通知服务.
+homepage: https://github.com/binwiederhier/ntfy
+author: binwiederhier
+application:
+  subdomain: ntfy
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://ntfy.cloud.lazycat.app.ntfy.lzcapp:80/
+services:
+  ntfy:
+    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:38ef0bd584de2a11
+    environment:
+      - TZ=UTC
+    command: serve
+    binds:
+      - /lzcapp/var/ntfy:/var/cache/ntfy
+      - /lzcapp/var/ntfy:/etc/ntfy
+unsupported_platforms:
+  - ios
+  - android
+  - tvos

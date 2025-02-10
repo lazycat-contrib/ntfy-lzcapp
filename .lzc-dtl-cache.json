@@ -1,0 +1,38 @@
+{
+  "name": "ntfy",
+  "package": "cloud.lazycat.app.ntfy",
+  "description": "一个简单的基于 HTTP 的发布\\订阅通知服务",
+  "homepage": "https://github.com/binwiederhier/ntfy",
+  "author": "binwiederhier",
+  "app_features": [
+    "background_task"
+  ],
+  "subdomain": "ntfy",
+  "version": "2.11.0",
+  "iconPath": "logo.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [
+    "ios",
+    "android",
+    "tvos"
+  ],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "ntfy_80_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_binwiederhier_ntfy": {
+    "originalImage": "binwiederhier/ntfy",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/binwiederhier/ntfy:38ef0bd584de2a11",
+    "timestamp": "2025-02-10T12:16:59.351Z"
+  },
+  "ntfy_volume_/var/cache/ntfy_action": "emptyDir",
+  "ntfy_volume_/var/cache/ntfy_location": "app_data",
+  "ntfy_volume_/etc/ntfy_action": "emptyDir",
+  "ntfy_volume_/etc/ntfy_location": "app_data"
+}
