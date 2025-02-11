@@ -14,6 +14,8 @@ application:
   usb_accel: false
   routes:
     - /=http://ntfy.cloud.lazycat.app.ntfy.lzcapp:80/
+  public_path:
+    - /
 services:
   ntfy:
     image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:38ef0bd584de2a11
