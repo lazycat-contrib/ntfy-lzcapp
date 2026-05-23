@@ -1,0 +1,19 @@
+application:
+  subdomain: ntfy
+  background_task: true
+  upstreams:
+    - location: /
+      backend: http://ntfy:80/
+  public_path:
+    - /
+
+services:
+  ntfy:
+    # binwiederhier/ntfy:v2.23.0
+    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:c6d87eb26120d9f5
+    environment:
+      - TZ={{.U.tz}}
+    command: serve
+    binds:
+      - /lzcapp/cache/ntfy:/var/cache/ntfy
+      - /lzcapp/var/ntfy:/etc/ntfy
