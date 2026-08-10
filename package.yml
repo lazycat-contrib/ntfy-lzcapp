@@ -1,11 +1,10 @@
 package: cloud.lazycat.app.ntfy
-version: 2.24.0
+version: 2.27.0
 name: ntfy
 description: 一个简单的基于 HTTP 的发布\订阅通知服务.
 min_os_version: 1.5.0
 homepage: https://github.com/binwiederhier/ntfy
 author: binwiederhier
-
 locales:
   zh:
     name: ntfy
@@ -13,11 +12,9 @@ locales:
   en:
     name: ntfy
     description: A simple HTTP-based pub/sub notification service.
-
 permissions:
   required:
     - net.internet
-
 unsupported_platforms:
   - ios
   - android

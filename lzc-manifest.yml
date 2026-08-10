@@ -6,11 +6,11 @@ application:
       backend: http://ntfy:80/
   public_path:
     - /
-
 services:
   ntfy:
     # binwiederhier/ntfy:v2.24.0
-    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:e6635a72bff26e0a
+    # upstream: docker.io/binwiederhier/ntfy:v2.27.0
+    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:6497e6b4488d455c
     environment:
       - TZ={{.U.tz}}
     command: serve
