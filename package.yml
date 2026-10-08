@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.ntfy
-version: 2.28.0
+version: 2.29.0
 name: ntfy
 description: 一个简单的基于 HTTP 的发布\订阅通知服务.
 min_os_version: 1.5.0
