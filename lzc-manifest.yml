@@ -9,8 +9,8 @@ application:
 services:
   ntfy:
     # binwiederhier/ntfy:v2.24.0
-    # upstream: docker.io/binwiederhier/ntfy:v2.33.1
-    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:82168c94e98804c3
+    # upstream: docker.io/binwiederhier/ntfy:v2.34.0
+    image: registry.lazycat.cloud/czyt/binwiederhier/ntfy:e3a3b459dc9016d6
     environment:
       - TZ={{.U.tz}}
     command: serve
